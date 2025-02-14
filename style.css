@@ -13,6 +13,17 @@ body {
   min-height: 100vh;
 }
 
+#search-bar{
+  border-radius: 0%;
+  border: none;
+  background-color: antiquewhite;
+}
+
+button{
+  background-color: antiquewhite;
+  border: none;
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -125,4 +136,26 @@ body {
 
 .dot.active {
   background: white;
+}
+
+div#Modal{
+  display: none;
+  position: fixed;
+  top: -160px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(44, 24, 16, 0.8); */
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff9e6;
+  margin: 15% auto;
+  padding: 2rem;
+  border: 2px solid var(--dark-brown);
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 8px 8px 0 rgba(44, 24, 16, 0.2);
 }

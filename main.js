@@ -1,31 +1,34 @@
 import './style.css'
+import { Separator } from '@radix-ui/react-separator';
 
 const animeImages = [
   {
-    url: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80',
-    title: 'Anime Scenery'
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEXHSyxH32QD0yoiZGoH8oSpQOWrJn0rYJKw&s',
+    title: 'Bleach'
   },
   {
-    url: 'https://images.unsplash.com/photo-1565204256578-db2626bf8420?auto=format&fit=crop&w=800&q=80',
-    title: 'Japanese Temple'
+    url: 'https://m.media-amazon.com/images/I/619RmKdoIiL._AC_UF1000,1000_QL80_.jpg',
+    title: 'Mokida'
   },
   {
-    url: 'https://images.unsplash.com/photo-1580477667995-2b94f01c9516?auto=format&fit=crop&w=800&q=80',
-    title: 'Cherry Blossoms'
+    url: 'https://cdn.leonardo.ai/users/a482cc8c-f5e8-4326-8038-82c383032a5a/generations/732d0b53-2fa3-4b74-8805-5419bebb73f9/Leonardo_Phoenix_09_Anime_Knight_90s_style_3.jpg',
+    title: 'Fate Zero'
   },
   {
-    url: 'https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=800&q=80',
-    title: 'Tokyo Night'
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9viQU73u_m0AS9iIXpzkjzCNlI_Dp6Wr0Jw&s',
+    title: 'One Piece'
   },
   {
-    url: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80',
-    title: 'Japanese Garden'
+    url: 'https://cdn.leonardo.ai/users/a482cc8c-f5e8-4326-8038-82c383032a5a/generations/7ca39232-b6ba-47f7-839e-174df2041761/Leonardo_Phoenix_09_Gon_from_hunter_x_hunter_0.jpg',
+    title: 'Gunzo'
   }
 ];
 
-document.querySelector('#app').innerHTML = `
+const App0 = document.querySelector('#app').innerHTML = `
   <div class="header">
-    <h1>Anime Gallery</h1>
+    <h1>Animpedia</h1>
+    <h2>Most Trending</h2>
+    <Separator orientation="horizontal" />
   </div>
   <div class="slideshow-container">
     ${animeImages.map((image, index) => `
@@ -42,6 +45,18 @@ document.querySelector('#app').innerHTML = `
       `).join('')}
     </div>
   </div>
+    <input type="text" id="searchBar" placeholder="Search anime..." />
+<div class="category-section">
+  <button class="category-btn" data-category="all">All A-Z</button>
+  <button class="category-btn" data-category="action" onclick="document.getElementById(Modal).style.display='block'">Categories</button>
+</div>
+<div class="modal" id="Modal">
+<div class="modal-content">
+<div>
+    Vey
+  </div>
+</div>
+</div>
 `;
 
 let currentSlide = 0;
@@ -82,3 +97,5 @@ dots.forEach(dot => {
 
 // Auto-advance slides every 5 seconds
 setInterval(nextSlide, 5000);
+
+export default App0;
